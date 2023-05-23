@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { LineWave } from 'react-loader-spinner';
 
 import { UserMenu } from 'components/userMenu/UserMenu';
 import { useSelectors } from 'hooks/UseSelector';
+import Loader from 'components/Loader/Loader';
 
 import {
   NavigationContainer,
@@ -51,22 +51,7 @@ export const Navigation = () => {
         </HeaderNav>
       </NavigationContainer>
       <main>
-        <Suspense
-          fallback={
-            <LineWave
-              height="200"
-              width="200"
-              color="#FBCA1F"
-              ariaLabel="line-wave"
-              wrapperStyle={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
