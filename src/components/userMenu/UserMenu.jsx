@@ -7,6 +7,7 @@ import {
   UserNameWrapper,
   UserNameInfo,
   NavigationLink,
+  UserNameStyled,
 } from './UserMenu.styled';
 
 export const UserMenu = () => {
@@ -19,7 +20,9 @@ export const UserMenu = () => {
 
   return (
     <UserNameWrapper>
-      <UserNameInfo>Welcome, {userName}</UserNameInfo>
+      <UserNameInfo>
+        Welcome, <UserNameStyled>{userName}</UserNameStyled>{' '}
+      </UserNameInfo>
       <NavigationLink onClick={handleLogout}>Logout</NavigationLink>
     </UserNameWrapper>
   );

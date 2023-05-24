@@ -31,3 +31,7 @@ export const NavigationLink = styled(Link)`
     background-color: #000;
   }
 `;
+
+export const UserNameStyled = styled.span`
+  color: #f00;
+`;
