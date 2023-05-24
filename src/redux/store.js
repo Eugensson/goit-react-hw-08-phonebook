@@ -29,6 +29,7 @@ export const store = configureStore({
     contacts: contactSlice.reducer,
     filter: Filter.reducer,
   },
+
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
@@ -36,4 +37,5 @@ export const store = configureStore({
       },
     }),
 });
+
 export const persistor = persistStore(store);

@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
-import { useSelectors } from '../../hooks/UseSelector';
-import Notification from '../notafication/Notafication';
-
 import {
   ContactInfo,
   InfoWrapper,
@@ -13,8 +9,13 @@ import {
   DeleteBtn,
 } from './Contacts.styled';
 
+import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
+import { useSelectors } from '../../hooks/UseSelector';
+import Notification from '../notafication/Notafication';
+
 const Contact = () => {
   const dispatch = useDispatch();
+
   const { contacts, filter, isLoggedIn } = useSelectors();
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Contact = () => {
 
   const getVisibleContacts = () => {
     const normalizedFilter = filter ? filter.toLowerCase() : '';
+
     return contacts.filter(({ name }) =>
       name.toLowerCase().includes(normalizedFilter)
     );

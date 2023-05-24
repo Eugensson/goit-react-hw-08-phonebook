@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Form, Contact, Filter } from 'components/index';
-
 import { Heading } from 'components/pages.styled';
+
+import { Form, Contact, Filter } from 'components/index';
 
 const Contacts = () => {
   return (

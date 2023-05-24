@@ -1,10 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { UserMenu } from 'components/userMenu/UserMenu';
-import { useSelectors } from 'hooks/UseSelector';
-import Loader from 'components/Loader/Loader';
-
 import {
   NavigationContainer,
   NavigationList,
@@ -14,6 +10,10 @@ import {
   ContactsLink,
   UserMenuWrapper,
 } from './Navigation.styled';
+
+import { UserMenu } from 'components/userMenu/UserMenu';
+import { useSelectors } from 'hooks/UseSelector';
+import Loader from 'components/Loader/Loader';
 
 export const Navigation = () => {
   const { isLoggedIn } = useSelectors();

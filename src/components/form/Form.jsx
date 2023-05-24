@@ -2,14 +2,16 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { TextField } from '@mui/material';
 
-import { addContact } from 'redux/contacts/operations';
-
 import { PhoneBookForm, PhoneBookLabel, PhoneBookBtn } from './Form.styled';
+
+import { addContact } from 'redux/contacts/operations';
 
 const Form = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
   const dispatch = useDispatch();
+
   const onInputChange = e => {
     const { name, value } = e.target;
     switch (name) {

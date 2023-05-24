@@ -4,6 +4,7 @@ import { useSelectors } from 'hooks/UseSelector';
 
 export const RestrictedRoute = ({ children }) => {
   const { isLoggedIn } = useSelectors();
+
   if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
   }

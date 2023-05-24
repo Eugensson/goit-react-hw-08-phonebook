@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { signIn } from 'redux/auth/operations';
-
 import {
   WrapperStyled,
   FormContent,
@@ -14,6 +12,8 @@ import {
   FormInput,
   FormError,
 } from 'components/pages.styled';
+
+import { signIn } from 'redux/auth/operations';
 
 const validationSchema = Yup.object({
   email: Yup.string().email().required(),

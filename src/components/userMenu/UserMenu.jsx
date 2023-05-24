@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
 
-import { logOut } from 'redux/auth/operations';
-import { useSelectors } from 'hooks/UseSelector';
-
 import {
   UserNameWrapper,
   UserNameInfo,
   NavigationLink,
   UserNameStyled,
 } from './UserMenu.styled';
+
+import { logOut } from 'redux/auth/operations';
+import { useSelectors } from 'hooks/UseSelector';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
