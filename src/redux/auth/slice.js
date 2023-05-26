@@ -39,7 +39,6 @@ export const authSlice = createSlice({
         state.error = null;
       })
       .addCase(logOut.rejected, (state, action) => {
-        state.isFetchingCurrentUser = false;
         state.error = action.payload;
       })
       .addCase(getUser.pending, state => {
